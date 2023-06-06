@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Line Comparison Computation Program\n");
 
-            //Points of Line1
+            /*//Points of Line1
             int a1 = 2;
             int b1 = 4;
             int c1 = 6;
@@ -23,6 +23,36 @@
             else
             {
                 Console.WriteLine("The Two Lines are not identical.");
+            }*/
+
+            //Coordinates of First Line
+
+            int x1 = 2;
+            int y1 = 4;
+            int x2 = 3;
+            int y2 = 6;
+
+            //Coordinates of Second Line
+
+            int x3 = 5;
+            int y3 = 10;
+            int x4 = 6;
+            int y4 = 12;
+
+            double lengthOfALine1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            double lengthOfALine2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
+
+            if(lengthOfALine1 == lengthOfALine2)
+            {
+                Console.WriteLine("First Line is equal to second Line. ");
+            }
+            else if(lengthOfALine1 > lengthOfALine2)
+            {
+                Console.WriteLine("First Line is greater than the second line.");
+            }
+            else
+            {
+                Console.WriteLine("Second Line is greaater than the first line.");
             }
         }
     }
