@@ -42,17 +42,19 @@
             double lengthOfALine1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
             double lengthOfALine2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
 
-            if(lengthOfALine1 == lengthOfALine2)
-            {
-                Console.WriteLine("First Line is equal to second Line. ");
-            }
-            else if(lengthOfALine1 > lengthOfALine2)
+            int result = lengthOfALine1.CompareTo(lengthOfALine2);
+
+            if( result > 0 )
             {
                 Console.WriteLine("First Line is greater than the second line.");
             }
+            else if(result < 0)
+            {
+                Console.WriteLine("Second Line is greater than the second line.");
+            }
             else
             {
-                Console.WriteLine("Second Line is greaater than the first line.");
+                Console.WriteLine("Both lines are equal.");
             }
         }
     }
